@@ -30,6 +30,8 @@ Un ESP32 pilote un bandeau WS2812B posé au-dessus du clavier et allume les touc
 - MIDI : UART2, 31 250 bauds, 8N1, signal non inversé.
 - RX0/TX0 sont réservés à l'USB (moniteur série à 115 200 bauds).
 
+Le boîtier (boîte + couvercle, fichiers STL à imprimer) est dans [`boitier/`](boitier/).
+
 > ⚠️ **Débranche le fil VIN de l'ESP32 avant de brancher l'USB** pour programmer, afin de protéger le port USB du PC. Le bandeau peut rester sur l'alimentation 5 V à condition que les masses restent communes.
 
 ## Compilation et téléversement
@@ -161,6 +163,7 @@ Fichier d'essai : `python3 outils/generer_exercice.py` crée un exercice à deux
 | `src/tests_leds.*` | animations de diagnostic non bloquantes |
 | `src/commandes_serie.*` | commandes de maintenance |
 | `src/main.cpp` | `setup()` / `loop()` |
+| `boitier/` | boîtier à imprimer (STL) |
 
 Répartition sur les deux cœurs : le Wi-Fi et le serveur web tournent sur le cœur 0 ; `loop()` (MIDI, lecture, LED) sur le cœur 1. Les callbacks web ne font que mettre les commandes en file ; `loop()` les exécute.
 
