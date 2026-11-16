@@ -1,4 +1,6 @@
-# Bandeau LED d'apprentissage du piano — Yamaha MX49 + ESP32
+# Piano LED — les touches s'allument, il n'y a plus qu'à jouer
+
+*Bandeau LED d'apprentissage du piano pour Yamaha MX49, piloté par un ESP32.*
 
 Un ESP32 pilote un bandeau WS2812B posé au-dessus du clavier et allume les touches à jouer. On envoie un fichier MIDI depuis son téléphone ou son ordinateur, on choisit la vitesse et la main à travailler, et le bandeau montre quelles touches enfoncer. Le MX49 peut jouer le morceau lui-même, ou attendre qu'on joue la bonne note.
 
